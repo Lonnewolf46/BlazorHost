@@ -1,17 +1,73 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager navManager;
+@using MudBlazor
 
-<div class="page">
-    <div class="sidebar">
+<MudThemeProvider Theme="@_temaActual" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudImage ObjectFit="ObjectFit.ScaleDown" ObjectPosition="ObjectPosition.Center" Src="/sample-data/LBLogoWhite.png" Alt="" Width="250" Height="150" />
         <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+    </MudAppBar>
+    <MudMainContent Class="pt-16 px-16">
+        <MudContainer Class="mt-6">
             @Body
-        </article>
-    </main>
-</div>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private MudTheme _temaActual = new MudTheme();
+
+    protected override void OnInitialized()
+    {
+        //Tema por defecto
+        _temaActual = new MudTheme()
+        {
+            PaletteLight = new PaletteLight
+            {
+                Primary = "003938",
+                AppbarBackground = "003938"
+            },
+            Typography = new Typography
+            {
+                H1 = new H1()
+                {
+                    FontSize = "2.5rem",
+                    FontWeight = 600
+                },
+                H2 = new H2()
+                {
+                    FontSize = "2rem",
+                    FontWeight = 300
+                },
+                H3 = new H3()
+                {
+                    FontSize = "1.5rem",
+                    FontWeight = 150
+                },
+                Body1 = new Body1()
+                {
+                    FontSize = "1rem",
+                },
+                Subtitle1 = new Subtitle1()
+                {
+                    FontSize = "0.8rem",
+                },
+                Button = new Button()
+                {
+                    FontSize = "1rem",
+                }
+            }
+        };
+    }
+
+    private void GoTo()
+    {
+        navManager.NavigateTo("/fetchdata");
+    }
+
+}
