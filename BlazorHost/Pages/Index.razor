@@ -4,21 +4,58 @@
 <MudText Align="Align.Center" Typo="Typo.h1">Nuestros servicios</MudText>
 <MudDivider/>
 <MudCarousel Class="mud-width-full" Style="height:300px;" ShowArrows="@arrows" ShowBullets="false" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
-    <MudCarouselItem Transition="transition" Color="@Color.Primary">
-        <div class="d-flex" style="height:100%">
-            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Material.Filled.MedicalServices" Size="@Size.Large" />
-        </div>
+    <MudCarouselItem  Transition="transition" Color="@Color.Primary">
+    <MudCard Class="mud-theme-primary" Style="height:300px;">
+        <MudCardMedia Image="/sample-data/1.jpg" Height="280"/>
+        <MudCardContent>
+            <MudText Align="Align.Center" Typo="Typo.body1">Biopsias excisionales e incisionales</MudText>
+        </MudCardContent>
+    </MudCard>
     </MudCarouselItem>
     <MudCarouselItem Transition="transition" Color="@Color.Secondary">
-        <div class="d-flex" style="height:100%">
-                <MudIcon Class="mx-auto my-auto" Icon="@Icons.Material.Filled.MedicalServices" Size="@Size.Large" />
-        </div>
+            <MudCard Class="mud-theme-primary" Style="height:300px;">
+                <MudCardMedia Image="/sample-data/2.jpg" Height="280" />
+                <MudCardContent>
+                    <MudText Align="Align.Center" Typo="Typo.body1">Biopsias excisionales e incisionales</MudText>
+                </MudCardContent>
+            </MudCard>
     </MudCarouselItem>
+
+        <MudCarouselItem Transition="transition" Color="@Color.Secondary">
+            <MudCard Class="mud-theme-primary" Style="height:300px;">
+                <MudCardMedia Image="/sample-data/3.jpg" Height="280" />
+                <MudCardContent>
+                    <MudText Align="Align.Center" Typo="Typo.body1">Biopsias por aguja fina y aguja gruesa</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+
     <MudCarouselItem Transition="transition">
-        <div class="d-flex" style="height:100%">
-                <MudIcon Class="mx-auto my-auto" Icon="@Icons.Material.Filled.MedicalServices" Color="@Color.Primary" Size="@Size.Large" />
-        </div>
+            <MudCard Class="mud-theme-primary" Style="height:300px;">
+                <MudCardMedia Image="/sample-data/CitConvencional.jpg" Height="280" />
+                <MudCardContent>
+                    <MudText Align="Align.Center" Typo="Typo.body1">Citologías convencionales</MudText>
+                </MudCardContent>
+            </MudCard>
     </MudCarouselItem>
+
+        <MudCarouselItem Transition="transition">
+            <MudCard Class="mud-theme-primary" Style="height:300px;">
+                <MudCardMedia Image="/sample-data/CitLiquida.jpg" Height="280" />
+                <MudCardContent>
+                    <MudText Align="Align.Center" Typo="Typo.body1">Citologías en fase líquida</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+
+        <MudCarouselItem Transition="transition">
+            <MudCard Class="mud-theme-primary" Style="height:300px;">
+                <MudCardMedia Image="/sample-data/CitLiquida.jpg" Height="280" />
+                <MudCardContent>
+                    <MudText Align="Align.Center" Typo="Typo.body1">Líquidos corporales</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
 </MudCarousel>
 </MudStack>
 
