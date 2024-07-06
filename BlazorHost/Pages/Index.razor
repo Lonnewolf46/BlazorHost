@@ -1,12 +1,13 @@
 ﻿@page "/"
+<div class="text-content">
 <MudStack>
-
 <MudText Align="Align.Center" Typo="Typo.h1">Nuestros servicios</MudText>
 <MudDivider/>
-<MudCarousel Class="mud-width-full" Style="height:300px;" ShowArrows="@arrows" ShowBullets="false" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+<MudCarousel Class="mud-width-full" Style="height:400px;" ShowArrows="@arrows" ShowBullets="false" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+    
     <MudCarouselItem Transition="transition" Color="@Color.Secondary">
-            <MudCard Class="mud-theme-primary" Style="height:300px;">
-                <MudCardMedia Image="/sample-data/2.jpg" Height="280" />
+            <MudCard Class="mud-theme-primary" Style="height:400px;">
+                <MudCardMedia Image="/sample-data/bp1.jpg" Height="380" />
                 <MudCardContent>
                     <MudText Align="Align.Center" Typo="Typo.body1">Biopsias excisionales e incisionales</MudText>
                 </MudCardContent>
@@ -14,8 +15,8 @@
     </MudCarouselItem>
 
         <MudCarouselItem Transition="transition" Color="@Color.Secondary">
-            <MudCard Class="mud-theme-primary" Style="height:300px;">
-                <MudCardMedia Image="/sample-data/3.jpg" Height="280" />
+            <MudCard Class="mud-theme-primary" Style="height:400px;">
+                <MudCardMedia Image="/sample-data/bp2.jpg" Height="380" />
                 <MudCardContent>
                     <MudText Align="Align.Center" Typo="Typo.body1">Biopsias por aguja fina y aguja gruesa</MudText>
                 </MudCardContent>
@@ -23,8 +24,8 @@
         </MudCarouselItem>
 
     <MudCarouselItem Transition="transition">
-            <MudCard Class="mud-theme-primary" Style="height:300px;">
-                <MudCardMedia Image="/sample-data/CitConvencional.jpg" Height="280" />
+            <MudCard Class="mud-theme-primary" Style="height:400px;">
+                <MudCardMedia Image="/sample-data/ct1.jpg" Height="380" />
                 <MudCardContent>
                     <MudText Align="Align.Center" Typo="Typo.body1">Citologías convencionales</MudText>
                 </MudCardContent>
@@ -32,8 +33,8 @@
     </MudCarouselItem>
 
         <MudCarouselItem Transition="transition">
-            <MudCard Class="mud-theme-primary" Style="height:300px;">
-                <MudCardMedia Image="/sample-data/CitLiquida.jpg" Height="280" />
+            <MudCard Class="mud-theme-primary" Style="height:400px;">
+                <MudCardMedia Image="/sample-data/ct2.jpg" Height="380" />
                 <MudCardContent>
                     <MudText Align="Align.Center" Typo="Typo.body1">Citologías en fase líquida</MudText>
                 </MudCardContent>
@@ -41,8 +42,8 @@
         </MudCarouselItem>
 
         <MudCarouselItem Transition="transition">
-            <MudCard Class="mud-theme-primary" Style="height:300px;">
-                <MudCardMedia Image="/sample-data/1.jpg" Height="280" />
+            <MudCard Class="mud-theme-primary" Style="height:400px;">
+                <MudCardMedia Image="/sample-data/5.jpg" Height="380" />
                 <MudCardContent>
                     <MudText Align="Align.Center" Typo="Typo.body1">Líquidos corporales</MudText>
                 </MudCardContent>
@@ -50,7 +51,7 @@
         </MudCarouselItem>
 </MudCarousel>
 </MudStack>
-
+</div>
 @code {
     private bool arrows = true;
     private bool enableSwipeGesture = true;

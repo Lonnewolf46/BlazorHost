@@ -8,14 +8,17 @@
 <MudSnackbarProvider />
 
 <MudLayout>
+    <div class="background-container"/>
     <MudAppBar Elevation="1">
         <MudImage ObjectFit="ObjectFit.ScaleDown" ObjectPosition="ObjectPosition.Center" Src="/sample-data/LBLogoWhite.png" Alt="" Width="250" Height="150" />
         <NavMenu />
     </MudAppBar>
     <MudMainContent Class="pt-16 px-16">
-        <MudContainer Class="mt-6">
-            @Body
+        <div class="content">
+            <MudContainer Class="mt-6">
+                @Body
         </MudContainer>
+        </div>
     </MudMainContent>
 </MudLayout>
 
@@ -31,7 +34,8 @@
             {
                 Primary = "003938",
                 AppbarBackground = "003938",
-                Secondary = "23AB7C"
+                Secondary = "23AB7C",
+                Tertiary = "123524"
             },
             Typography = new Typography
             {
