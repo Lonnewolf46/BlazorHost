@@ -1,0 +1,80 @@
+.mud-appbar .mud-navmenu {
+    display: flex;
+}
+
+    .mud-appbar .mud-navmenu .mud-nav-item {
+        width: auto;
+        height: calc(var(--mud-appbar-height) - var(--mud-appbar-height)/8);
+    }
+
+    .mud-appbar .mud-navmenu .mud-nav-link {
+        align-items: center;
+    }
+
+        .mud-appbar .mud-navmenu .mud-nav-link .mud-nav-link-text {
+            margin-left: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+        }
+
+
+    .mud-appbar .mud-navmenu.mud-navmenu-bordered .mud-nav-link.active:not(.mud-nav-link-disabled) {
+        border-inline-end-style: none;
+        border-inline-end-width: 0;
+        border-top-style: solid;
+        border-top-width: 2px;
+    }
+
+    .mud-appbar .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
+        color: inherit;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the h1 element with the class "fade-in-text" */
+.fade-in-text {
+    animation: fadeIn 1s; /* Adjust duration as needed */
+    font-family: verdana;
+    color: #f3f3f3;
+}
+
+.myImage {
+    max-width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    width: auto;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* Set the background image here */
+    background-image: url('/sample-data/background.png');
+    background-size: cover; /* Adjust as needed */
+    z-index: 0;
+}
+
+img {
+    object-fit: fill;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensure it's above the background */
+    /* Other styles for text container */
+}
